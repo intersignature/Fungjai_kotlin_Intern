@@ -15,8 +15,8 @@ Show data from json in listviews vertical and in each listview has two types. If
 # Example code service
 ```
 @GET(Constants.MUSIC_LIST)
-Call<List<DataModel>> getMusicList();
+fun getMusicList(): Call<List<MusicData>>
 ```
 
-# Source code in Kotlin
-* [Click to Kotlin source code](https://github.com/intersignature/Fungjai_kotlin_Intern)
+# Source code in Java
+* [Click to Kotlin source code](https://github.com/intersignature/Fungjai_Intern)

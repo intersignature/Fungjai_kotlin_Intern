@@ -19,4 +19,4 @@ fun getMusicList(): Call<List<MusicData>>
 ```
 
 # Source code in Java
-* [Click to Kotlin source code](https://github.com/intersignature/Fungjai_Intern)
+* [Click to Java source code](https://github.com/intersignature/Fungjai_Intern)

@@ -18,12 +18,12 @@ class DataController(private var context: Context, private var recyclerView: Rec
 
     fun getData() {
         datas = ArrayList()
-        val dataModel: Call<List<MusicData>>? = FungjaiInternApiManager().getFungjaiInternApi()?.getMusicList()
-        dataModel?.enqueue(this)
+        val dataModel: Call<List<MusicData>> = FungjaiInternApiManager().getFungjaiInternApi()!!.getMusicList()
+        dataModel.enqueue(this)
     }
 
-    override fun onResponse(call: Call<List<MusicData>>?, response: Response<List<MusicData>>?) {
-        datas = response?.body()!!
+    override fun onResponse(call: Call<List<MusicData>>, response: Response<List<MusicData>>) {
+        datas = response.body()!!
         adapeter = FungjaiInternRecyclerViewAdapter(datas, context)
         recyclerView.adapter = adapeter
         Toast.makeText(context, "success", Toast.LENGTH_SHORT).show()
